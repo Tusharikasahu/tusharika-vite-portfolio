@@ -1,0 +1,152 @@
+@use './variables' as vars;
+
+.split-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .left-section,
+  .right-section {
+    width: 50%;
+    padding: 4rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section {
+    background: linear-gradient(135deg, #d4ebe0, #c3d9d0);
+    color: #333;
+  }
+
+  .right-section {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+  }
+
+  .what-i-love {
+    margin-top: 2rem;
+    color: #fff;
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .love-items {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+
+      .love-item {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+
+        span {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .contact-bubbles {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    a {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 1rem;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .back-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+    }
+  }
+
+  .connect-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: vars.$deep-purple;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: darken(vars.$deep-purple, 10%);
+    }
+  }
+
+  .pill-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+
+    button {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+
+  .quote {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+}

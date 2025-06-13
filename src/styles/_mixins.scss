@@ -1,0 +1,23 @@
+// Responsive Mixin
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Button Mixin
+@mixin btn-style($bg, $hover-bg) {
+  background-color: $bg;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+}

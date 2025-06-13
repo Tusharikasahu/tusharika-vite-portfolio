@@ -1,0 +1,55 @@
+@use './variables' as vars;
+@use 'sass:color';
+
+.resume-btn,
+.connect-button {
+  background-color: vars.$deep-purple;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color.adjust(vars.$deep-purple, $lightness: -10%);
+  }
+}
+
+.contact-bubbles a,
+.contact-bubbles span {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+.pill-nav button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}

@@ -1,0 +1,12 @@
+@use './variables' as vars;
+@use 'sass:color';
+
+.left-section {
+  background: linear-gradient(135deg, vars.$light-gray, #e6e6e6);
+  color: #333;
+}
+
+.right-section {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #fff;
+}
