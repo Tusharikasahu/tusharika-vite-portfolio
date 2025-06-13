@@ -105,7 +105,7 @@ const SplitLayout = () => {
           <h4>What I Love</h4>
           <div className="love-items">
             <div className="love-item">
-              <span>🌱</span>
+              <span>👩🏻‍💻</span>
               <p>Clean Code</p>
             </div>
             <div className="love-item">
